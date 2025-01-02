@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    /* Light background color */
+}
+
+header {
+    display: flex;
+        /* Enable flexbox for alignment */
+        justify-content: space-between;
+        /* Space between logo and nav */
+        align-items: center;
+        /* Vertically align items */
+        background: #6c63ff;
+        /* Header background color */
+        color: white;
+        /* Text color */
+        padding: 10px 20px;
+        /* Padding for spacing */
+    
+}
+
+.logo {
+    max-width: 200px;
+        /* Control logo size */
+        margin: 0;
+        /* Remove any margin */
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    /* Remove bullets */
+    display: flex;
+    /* Inline flexbox for items */
+    margin: 0;
+    /* Remove extra margins */
+    padding: 0;
+    /* Remove extra padding */
+    gap: 15px;
+    /* Adjust spacing between items */
+    justify-content: flex-start;
+    /* Align items slightly to the left */
+    
+}
+
+/* Navbar text items */
+nav ul li a {
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.2rem;
+    /* Slightly increase font size */
+    padding: 8px 12px;
+    /* Padding inside each link */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Hover effect for navbar */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    /* Light overlay effect */
+    color: #fff;
+    /* Ensure text color contrast */
+}
+
+.hero {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    /* Space between text and image */
+    padding: 50px 40px;
+    /* Padding for hero section */
+    margin: 40px;
+    background-color: #eaecef;
+    /* Light gray background for hero */
+}
+
+.hero-text {
+    max-width: 50%;
+    /* Max width for text */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    /* Font size for heading */
+    margin-bottom: 20px;
+    /* Space below heading */
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    /* Space below paragraph */
+}
+
+.btn {
+    background: #6c63ff;
+    /* Button background */
+    color: white;
+    /* Button text color */
+    padding: 10px 20px;
+    /* Padding inside button */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Rounded corners for button */
+}
+
+.hero-image img {
+    max-width: 50%;
+    /* Limit width for image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.about {
+    padding: 50px 40px;
+    /* Padding for about section */
+    background-color: #f4f4f4;
+    /* Light gray background */
+    text-align: center;
+    /* Center text */
+}
+
+.about h2 {
+    font-size: 2em;
+    /* Font size for section heading */
+    margin: 30px 0;
+    /* Margin above and below heading */
+    color: #6c63ff;
+    /* Color for heading */
+}
+
+.member-group {
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Wrap to next line */
+    justify-content: center;
+    /* Center items */
+    margin: 20px 0;
+    /* Margin for the group */
+}
+
+.member {
+    margin: 15px;
+    /* Space around member items */
+    text-align: center;
+    /* Center text under images */
+}
+
+.member img {
+    width: 100px;
+    /* Width of member images */
+    height: 100px;
+    /* Height of member images */
+    border-radius: 50%;
+    /* Circular images */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+.events {
+    padding: 50px 40px;
+    /* Padding around the events section */
+    background-color: #f4f4f4;
+    /* Light gray background */
+    text-align: center;
+    /* Center text */
+}
+
+.events h2 {
+    font-size: 2em;
+    /* Font size for section heading */
+    margin: 30px 0;
+    /* Margin above and below heading */
+    color: #6c63ff;
+    /* Color for heading */
+}
+
+.event-group {
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Wrap items */
+    justify-content: center;
+    /* Center items */
+    margin: 20px 0;
+    /* Margin for the group */
+}
+
+.event {
+    border: 1px solid #6c63ff;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 15px;
+    /* Space between events */
+    padding: 20px;
+    /* Padding inside each event box */
+    background: white;
+    /* Background for event box */
+    max-width: 220px;
+    /* Max width for event boxes */
+}
+
+.event-image img {
+    width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners for image */
+}
+
+.event-details h3 input,
+.event-details p input,
+.event-details p textarea {
+    border: none;
+    /* Remove border */
+    border-bottom: 1px solid #6c63ff;
+    /* Bottom border */
+    width: calc(100% - 15px);
+    /* Full width */
+    margin-bottom: 10px;
+    /* Space below inputs */
+    padding: 5px;
+    /* Padding inside inputs */
+}
+
+.event-details textarea {
+    height: 60px;
+    /* Height for description */
+    resize: none;
+    /* Prevent resizing of textarea */
+}
+
+.gallery {
+    padding: 50px 40px;
+    /* Padding around the gallery section */
+    background-color: #ffffff;
+    /* White background */
+    text-align: center;
+    /* Center text */
+}
+
+.gallery h2 {
+    font-size: 2em;
+    /* Font size for section heading */
+    margin: 30px 0;
+    /* Margin above and below heading */
+    color: #6c63ff;
+    /* Color for heading */
+}
+
+.gallery-group {
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Wrap items */
+    justify-content: center;
+    /* Center items */
+    margin: 20px 0;
+    /* Margin for the group */
+}
+
+.gallery-item {
+    border: 1px solid #6c63ff;
+    /* Border color */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 15px;
+    /* Space between items */
+    overflow: hidden;
+    /* Preserve image and title appearance */
+    max-width: 350px;
+    /* Max width for gallery items */
+}
+
+.gallery-item img {
+    width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.image-title {
+    padding: 10px;
+    /* Padding inside title area */
+}
+
+.image-title input {
+    border: none;
+    /* Remove border */
+    border-bottom: 1px solid #6c63ff;
+    /* Bottom border */
+    width: calc(100% - 20px);
+    /* Full width */
+    padding: 5px;
+    /* Padding inside input */
+    text-align: center;
+    /* Center title text */
+}
+
+/* Styles for the Feedback Form Section */
+.feedback {
+    padding: 50px 40px;
+    /* Padding around the feedback section */
+    background-color: #f4f4f4;
+    /* Light gray background */
+    text-align: center;
+    /* Center text */
+}
+
+.feedback h2 {
+    font-size: 2em;
+    /* Font size for feedback section heading */
+    margin: 30px 0;
+    /* Margin above and below heading */
+    color: #6c63ff;
+    /* Color for heading */
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    /* Arrange elements vertically */
+    gap: 1rem;
+    /* Space between elements */
+    max-width: 400px;
+    /* Max width for the form */
+    margin: 0 auto;
+    /* Center the form */
+    background: white;
+    /* White background for the form */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+.feedback-form label {
+    text-align: left;
+    /* Align label to the left */
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    border: 1px solid #6c63ff;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners for inputs */
+    padding: 10px;
+    /* Padding inside inputs */
+    width: 100%;
+    /* Full width */
+}
+
+.feedback-form textarea {
+    height: 100px;
+    /* Height for textarea */
+}
+
+button {
+    background: linear-gradient(90deg, #6c63ff, #3f47cc);
+    /* Gradient background */
+    color: white;
+    /* Button text color */
+    padding: 10px;
+    /* Padding inside button */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.custom-contact {
+    padding: 50px 40px;
+    background-color: #ffffff;
+}
+
+.custom-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-section {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.custom-section h2 {
+    font-size: 1.8em;
+    color: #6c63ff;
+    margin-bottom: 10px;
+}
+
+.custom-section p {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 12px;
+    color: #6c63ff;
+    font-size: 28px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b6b;
+    transform: scale(1.2);
+}
+footer {
+    background-color: #6c63ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
