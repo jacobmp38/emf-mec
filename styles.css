@@ -218,7 +218,7 @@ nav ul li a:hover {
     /* Maintain aspect ratio */
 }
 
-.events {
+.events2 {
     padding: 50px 40px;
     /* Padding around the events section */
     background-color: #ffffff;
@@ -227,7 +227,7 @@ nav ul li a:hover {
     /* Center text */
 }
 
-.events h2 {
+.events2 h2 {
     font-size: 3em;
     /* Font size for section heading */
     margin: 30px 0;
@@ -239,7 +239,7 @@ nav ul li a:hover {
 
 
 
-.event-group {
+.event-group2 {
     display: flex;
     /* Use flexbox */
     flex-wrap: wrap;
@@ -250,7 +250,7 @@ nav ul li a:hover {
     /* Margin for the group */
 }
 
-.event {
+.event2 {
     
     /* Border color */
     
@@ -263,21 +263,22 @@ nav ul li a:hover {
     /* Background for event box */
     max-width: 400px;
     /* Max width for event boxes */
+    
 }
 
-.event-image img {
+.event-image2 img {
     width: 350px;
     /* Responsive image */
     height: 350px;
-    border: 1px solid #282828;
+    
     /* Maintain aspect ratio */
     
     /* Rounded corners for image */
 }
 
-.event-details h3 input,
-.event-details p input,
-.event-details p textarea {
+.event-details2 h3 input,
+.event-details2 p input,
+.event-details2 p textarea {
     border: none;
     /* Remove border */
     border-bottom: 1px solid #6c63ff;
@@ -290,14 +291,14 @@ nav ul li a:hover {
     /* Padding inside inputs */
 }
 
-.event-details textarea {
+.event-details2 textarea {
     height: 60px;
     /* Height for description */
     resize: none;
     /* Prevent resizing of textarea */
 }
 
-.gallery {
+.gallery2 {
     padding: 50px 40px;
     /* Padding around the gallery section */
     background-color: #eaecef;
@@ -306,7 +307,7 @@ nav ul li a:hover {
     /* Center text */
 }
 
-.gallery h2 {
+.gallery2 h2 {
     font-size: 2em;
     /* Font size for section heading */
     margin: 30px 0;
@@ -326,7 +327,7 @@ nav ul li a:hover {
     /* Margin for the group */
 }
 
-.gallery-item {
+.gallery-item2 {
     
     /* Border color */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -339,7 +340,7 @@ nav ul li a:hover {
     /* Max width for gallery items */
 }
 
-.gallery-item img {
+.gallery-item2 img {
     width: 100%;
     /* Responsive image */
     height: auto;
@@ -347,16 +348,16 @@ nav ul li a:hover {
     
 }
 
-.gallery-item img:hover{
+.gallery-item2 img:hover{
     transform: scale(1.4);
 }
 
-.image-title {
+.image-title2 {
     padding: 10px;
     /* Padding inside title area */
 }
 
-.image-title input {
+.image-title2 input {
     border: none;
     /* Remove border */
     border-bottom: 1px solid #6c63ff;
@@ -496,6 +497,8 @@ button {
     color: #fbf1c7;
     transform: scale(1.2);
 }
+
+
 footer {
     background-color: #282828;
     color:#948985 ;
@@ -504,5 +507,242 @@ footer {
     border-top: 5px solid #3c3c3c;
 }
 
+  
+ .gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right:50px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+}
+  
+  .gallery-item {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal.active {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .modal.active .modal-content {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .close-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  
+  .modal.active .caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Navigation buttons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1001;
+  }
+  
+  .nav-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .prev-btn {
+    left: 20px;
+  }
+  
+  .next-btn {
+    right: 20px;
+  }
+  
+  /* Caption overlay for gallery items */
+  .item-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .item-caption {
+    transform: translateY(0);
+  }
 
+/* event card */
+.events-grid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right:50px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  .event-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .event-card:hover .event-image img {
+    transform: scale(1.05);
+  }
+  
+  
+  
+ 
+  
+  .event-title {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  
+  
 
+  
+  .event-description {
+    padding-left: 10px;
+    margin: 15px 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-light);
+  }
+  
+  
+  
